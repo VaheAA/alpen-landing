@@ -1,0 +1,53 @@
+@use '../util' as u;
+
+.header {
+  position: fixed;
+  background-color: #fff;
+  left: 0;
+  right: 0;
+  top: 0;
+  max-width: 100%;
+  padding: u.rem(9) 0;
+  z-index: 100;
+  box-shadow: -4px 7px 5px -5px rgba(0, 0, 0, 0.22);
+
+  &__wrapper {
+    width: min(100% - u.rem(40), u.rem(1440));
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    gap: u.rem(30);
+  }
+
+  &__item {
+    padding: u.rem(5) 0;
+  }
+
+  &__link {
+    font-weight: 700;
+    color: var(--primary-color);
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: u.rem(4);
+      background-color: var(--warning-color);
+      bottom: u.rem(-29);
+      left: 0;
+      transition: all 0.3s linear;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}

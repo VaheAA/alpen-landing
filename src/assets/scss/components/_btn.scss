@@ -1,0 +1,27 @@
+@use '../util' as u;
+
+.btn {
+  padding: u.rem(15) u.rem(30);
+  border: none;
+  border-radius: u.rem(25);
+  font-size: u.rem(16);
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  &--dark {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+
+  &--light {
+    background-color: #fff;
+    color: var(--primary-color);
+  }
+
+  &:hover {
+    transform: translateY(4px);
+  }
+}
