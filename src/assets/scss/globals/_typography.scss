@@ -91,6 +91,14 @@ a:active {
     color: #000;
   }
 
+  &--primary {
+    color: var(--primary-color);
+  }
+
+  &--secondary {
+    color: var(--secondary-color);
+  }
+
   &--medium {
     font-weight: 500;
   }

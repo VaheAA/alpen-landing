@@ -3,6 +3,7 @@
 html {
   box-sizing: border-box;
   font-size: 100%;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -27,6 +28,10 @@ body {
 
   &--xl {
     width: min(100% - u.rem(40), u.rem(1440));
+  }
+
+  &--xxl {
+    width: min(100% - u.rem(40), u.rem(1600));
   }
 }
 
