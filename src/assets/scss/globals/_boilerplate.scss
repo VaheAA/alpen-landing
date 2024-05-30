@@ -22,6 +22,10 @@ body {
   color: var(--text-color);
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .container {
   width: min(100% - u.rem(40), u.rem(1260));
   margin-inline: auto;

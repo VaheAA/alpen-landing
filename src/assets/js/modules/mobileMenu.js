@@ -5,14 +5,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
   menuBtn.addEventListener('click', () => {
     menuBtn.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
+    mobileMenu.style.display = 'flex';
+    setTimeout(() => {
+      mobileMenu.classList.toggle('open');
+    }, 100);
     body.classList.toggle('no-scroll');
   });
 
   mobileMenu.addEventListener('click', (e) => {
-    if (e.target.classList.contains('form-control')) return;
     menuBtn.classList.remove('open');
     mobileMenu.classList.remove('open');
+    mobileMenu.style.display = 'none';
     body.classList.remove('no-scroll');
   });
 });

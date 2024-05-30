@@ -57,7 +57,7 @@
   transform: translateX(-100%);
   transition: all 0.3s linear;
   z-index: 99;
-  display: flex;
+  display: none;
   flex-direction: column;
 
   &.open {
