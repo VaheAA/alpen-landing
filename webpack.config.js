@@ -14,7 +14,7 @@ const htmlPlugins = htmlFiles.map((file) => {
   return new HtmlWebpackPlugin({
     filename: path.basename(file),
     template: file,
-    inject: true,
+    inject: 'head',
     chunks: ['main'],
     templateParameters: {
       preloadCss: true,
