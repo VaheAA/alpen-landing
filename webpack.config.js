@@ -16,6 +16,9 @@ const htmlPlugins = htmlFiles.map((file) => {
     template: file,
     inject: true,
     chunks: ['main'],
+    templateParameters: {
+      preloadCss: true,
+    },
   });
 });
 
