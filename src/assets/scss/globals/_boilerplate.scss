@@ -38,3 +38,8 @@ body {
 .main {
   padding-top: u.rem(96);
 }
+
+.link {
+  text-decoration: underline;
+  color: var(--bright-blue);
+}

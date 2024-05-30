@@ -66,16 +66,16 @@ a:active {
 .text {
   &--small {
     font-size: u.rem(16);
-    line-height: u.rem(18);
+    line-height: u.rem(22);
   }
   &--normal {
     font-size: u.rem(18);
-    line-height: u.rem(20);
+    line-height: u.rem(24);
   }
 
   &--large {
     font-size: u.rem(24);
-    line-height: u.rem(28);
+    line-height: u.rem(30);
 
     @include u.breakpoint-down(small) {
       font-size: u.rem(14);
@@ -97,6 +97,10 @@ a:active {
 
   &--secondary {
     color: var(--secondary-color);
+  }
+
+  &--warning {
+    color: var(--warning-color);
   }
 
   &--medium {

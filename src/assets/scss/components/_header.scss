@@ -21,6 +21,12 @@
 }
 
 .nav {
+  display: block;
+
+  @include u.breakpoint-down(medium) {
+    display: none;
+  }
+
   &__list {
     display: flex;
     gap: u.rem(30);
@@ -34,6 +40,10 @@
     font-weight: 700;
     color: var(--primary-color);
     position: relative;
+
+    &.active::after {
+      width: 100%;
+    }
 
     &::after {
       content: '';

@@ -20,7 +20,7 @@
 </head>
 
 <body>
-  <div class="header">
+  <header class="header">
     <div class="header__wrapper">
       <a
         class="logo"
@@ -36,23 +36,71 @@
           <li class="nav__item">
             <a
               class="nav__link"
-              href="#"
+              href="#apps"
             >Get App</a>
           </li>
           <li class="nav__item">
             <a
               class="nav__link"
-              href="#"
+              href="instructions.html"
             >Bike instructions</a>
           </li>
           <li class="nav__item">
             <a
               class="nav__link"
-              href="#"
+              href="mailto:info@alpenrentals.com"
             >Contact Us</a>
           </li>
         </ul>
       </nav>
+      <div class="burger">
+        <button
+          class="burger__btn"
+          id="menu-btn"
+        >
+          <span class="burger__line burger__line-top"></span>
+          <span class="burger__line burger__line-middle"></span>
+          <span class="burger__line burger__line-bottom"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-menu">
+    <nav class="mobile-menu__nav">
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item">
+          <a
+            href="#apps"
+            class="mobile-menu__link text-white link-underline-0"
+          >Get App</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a
+            href="instructions.html"
+            class="text-white link-underline-0 mobile-menu__link"
+          >Bike instructions</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a
+            href="mailto:info@alpenrentals.com"
+            class="text-white link-underline-0 mobile-menu__link"
+          >Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="mobile-menu__icons">
+      <a href="#">
+        <img
+          src="./assets/img/icons/linkedin-dark.svg"
+          alt=""
+        >
+      </a>
+      <a href="#">
+        <img
+          src="./assets/img/icons/instagram-dark.svg"
+          alt=""
+        >
+      </a>
     </div>
   </div>
   <main class="main">
@@ -77,7 +125,7 @@
         </div>
         <div class="hero__footer">
           <span class="text text--normal text--medium text--light">Begin your adventure at</span>
-          <span class="text text--normal text--medium text--light">
+          <span class="text text--normal text--medium text--light hero__address">
             <img src="./assets/img/icons/lcoation.svg">
             Gravity Haus: 605 South Park Avenue</span>
         </div>
@@ -243,13 +291,16 @@
             </div>
           </div>
           <a
-            href="#"
+            href="instructions.html"
             class="btn btn--dark btn--center"
           >Bike instructions</a>
         </div>
       </div>
     </section>
-    <section class="apps">
+    <section
+      class="apps"
+      id="apps"
+    >
       <div class="container">
         <div class="apps__inner">
           <div class="apps__content">
@@ -328,14 +379,20 @@
               <li>
                 <a
                   class="footer__link text--secondary"
-                  href="#"
-                >Company</a>
+                  href="#apps"
+                >Get apps</a>
               </li>
               <li>
                 <a
                   class="footer__link text--secondary"
-                  href="#"
-                >Contact</a>
+                  href="instructions.html"
+                >Bike instructions</a>
+              </li>
+              <li>
+                <a
+                  class="footer__link text--secondary"
+                  href="mailto:info@alpenrentals.com"
+                >Contact us</a>
               </li>
             </ul>
           </div>
