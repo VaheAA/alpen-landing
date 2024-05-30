@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const glob = require('glob');
 
 const mode = process.env.NODE_ENV || 'development';
@@ -14,7 +15,7 @@ const htmlPlugins = htmlFiles.map((file) => {
   return new HtmlWebpackPlugin({
     filename: path.basename(file),
     template: file,
-    inject: 'head',
+    inject: true,
     chunks: ['main'],
     templateParameters: {
       preloadCss: true,
@@ -42,10 +43,11 @@ module.exports = {
     assetModuleFilename: './assets/img/[hash][ext]',
   },
   plugins: [
-    ...htmlPlugins,
+    new WebpackManifestPlugin(),
     new MiniCssExtractPlugin({
       filename: './assets/css/[name].[contenthash].css',
     }),
+    ...htmlPlugins,
   ],
   module: {
     rules: [
@@ -86,7 +88,6 @@ module.exports = {
                 progressive: true,
                 quality: 75,
               },
-              // optipng.enabled: false will disable optipng
               optipng: {
                 enabled: false,
               },
@@ -97,7 +98,6 @@ module.exports = {
               gifsicle: {
                 interlaced: false,
               },
-              // the webp option will enable WEBP
               webp: {
                 quality: 75,
               },
