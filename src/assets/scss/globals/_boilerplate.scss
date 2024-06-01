@@ -30,12 +30,24 @@ body {
   width: min(100% - u.rem(40), u.rem(1260));
   margin-inline: auto;
 
+  @include u.breakpoint-down(small) {
+    width: min(100% - u.rem(30), u.rem(1260));
+  }
+
   &--xl {
     width: min(100% - u.rem(40), u.rem(1440));
+
+    @include u.breakpoint-down(small) {
+      width: min(100% - u.rem(30), u.rem(1260));
+    }
   }
 
   &--xxl {
     width: min(100% - u.rem(40), u.rem(1600));
+
+    @include u.breakpoint-down(small) {
+      width: min(100% - u.rem(30), u.rem(1260));
+    }
   }
 }
 
